@@ -1,0 +1,42 @@
+@use '../../../../styles/variables' as v;
+
+
+.custemAdvertCart {
+
+
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+  img {
+    overflow: auto;
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+
+  .icons {
+    background-color: #f3f3f3;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f18505;
+
+  }
+
+  .statusP {
+    background-color: #f18505;
+    width: 70px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}

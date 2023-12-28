@@ -1,0 +1,36 @@
+@use "../../styles/variables" as v;
+
+.loginPage{
+
+  
+    .label{
+        font-family: 'Oswald', sans-serif 400;
+        font-size: 1.4rem;
+    }
+    .control, span{
+        background-color: v.$color5;
+        border-color: white;
+        border-radius: 0;
+        height: 50px;
+        border-bottom: 2px solid black; 
+
+    }
+
+    .btn-login{
+        font-family: v.$font-family;
+        font-size: 1.5rem;
+        background-color: v.$color2;
+     
+    }
+
+
+    .forgot-password{
+        font-size: 1.2rem;
+        color: black;
+        text-decoration: none;
+        text-align: end;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}

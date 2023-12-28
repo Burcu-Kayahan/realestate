@@ -1,0 +1,42 @@
+@use "../../../../styles/variables" as v;
+
+
+.usersEdit{
+ input {
+  border: none;
+  padding: 10px;
+  background-color: v.$color4;
+  border-radius: 0px ;
+  -webkit-border-radius: 0px ;
+  -moz-border-radius: 0px ;
+  -ms-border-radius: 0px ;
+  -o-border-radius: 0px ;
+};
+  select {
+    border: none;
+    padding: 10px;
+  background-color: v.$color4;
+  border-radius: 0px ;
+  -webkit-border-radius: 0px ;
+  -moz-border-radius: 0px ;
+  -ms-border-radius: 0px ;
+  -o-border-radius: 0px ;
+  justify-content: flex-end;
+  }
+
+  .delete{   
+     width: 170px;
+   background-color: v.$color7;
+  }
+   .save{
+    width: 170px;
+   background-color: v.$color2;
+    }
+
+    .close{
+       width: 170px;
+   background-color: v.$color2;
+    }
+
+  
+}

@@ -1,0 +1,62 @@
+@use "../../../../styles/variables" as v;
+
+.logs_title {
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 2px solid v.$color2;
+
+  span{
+    position: relative;
+    z-index: 1;
+    margin: 5px;
+  }
+
+    &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 1px);  /*Buton içindeki yazının öncesinde başlayacak*/
+    width: 20px;    /*Çizgiuzunluğu(istediğinizuzunluğuayarlayabilirsiniz)*/
+    border-bottom: 1px solid v.$color2;    /*Çizgiözellikleri*/
+    transform: translateY(-50%);
+    z-index: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px); /* Buton içindeki yazının sonrasında başlayacak */
+    width: 1080px; /* Çizgi uzunluğu (istediğiniz uzunluğu ayarlayabilirsiniz) */
+    border-bottom: 1px solid v.$color2; /* Çizgi özellikleri */
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+}
+
+
+  .AdminCustomerLogs {
+      margin: 5px;
+      padding: 5px;
+      font-size: 1rem;
+  }
+
+.AdminCustomerLogs-row {
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  margin: 10px; /* Her kenar için aynı değer */
+  padding: 20px;
+}
+
+
+
+

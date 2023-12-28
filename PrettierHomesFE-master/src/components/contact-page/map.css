@@ -1,0 +1,7 @@
+/* BOOTSTRAP */
+@media (max-width: 767px) {
+  .map iframe {
+    width: 100%;
+    height: 45vh;
+  }
+}/*# sourceMappingURL=map.css.map */

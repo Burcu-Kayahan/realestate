@@ -1,0 +1,123 @@
+@use "../../../../styles/variables" as v;
+
+.customerList {
+
+ .p-datatable-tbody{
+  // display: flexbox;
+  // row-gap: 20px;
+  // margin-bottom: 20px;
+  // background-color: bisque;
+
+  
+     color: red;
+    // border: 2px solid #ccc; // Kenarlık rengi ve kalınlığı
+      margin-bottom: 40px; // Satırlar arası boşluk
+      padding: 20px;
+      height: 50px;
+      gap: 10px;
+      margin: 40px;
+       background-color: bisque;
+        border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+       td {
+        margin-bottom: 20px;
+      }
+  
+ }
+    // .p-row-odd {
+    //   color: red;
+    // }
+ 
+
+  .p-paginator {
+    display: flex;
+    justify-content: right;
+    button {
+      margin: 5px;
+    }
+
+    // .p-paginator-page.p-highlight{
+    //  font-size: 30px;
+    // }
+
+    .p-dropdown-hidden-select {
+      border: 1px;
+      margin-right: 20px;
+    }
+  }
+//  yukaridaki scss kodlari DataTable icin yazilmisti, silinecek.
+  .inputDiv {
+  position: relative;
+  width: 100%; 
+  margin: 10px; 
+   border-radius: 20px;
+    background-color: #F4F4F4;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+.inputDiv input {
+  // padding: 20px;
+  width: calc(100% - 40px); /* İkona ayrılan genişlik kadar azalt */
+  height: 30px;
+ outline: none;
+  border: none;
+  background-color: #F4F4F4;
+
+}
+
+.iconsSearch {
+   position: absolute;
+   top: 50%;
+   right: 0px;
+   /*İstenilenboşlukmiktarınıayarlayabilirsiniz*/transform: translateY(-50%);
+   background: none;
+   border: none;
+   padding: 0;
+   cursor: pointer;
+  //  background-color: #F18505;
+  background-color: v.$color2;
+   height: 100%;
+   width: 70px;
+ border-radius: 20px;
+ color: white;
+ 
+}
+
+   
+.iconsSearch svg {
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+
+.totalElement{
+  font-weight: 800;
+}
+            
+
+            .icons{
+              font-size: 30px;
+              font-weight: bold;
+              color: #F18505;
+            }
+            @media (max-width: 767px) {
+              .max600{
+                display: none !important;
+                color: red;
+              }             
+             
+              .inputDiv{
+                display: inline-block;
+              }
+            }
+
+         
+
+           
+}
+  
+

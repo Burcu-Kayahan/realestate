@@ -1,0 +1,10 @@
+{
+    "admin" : [
+        { "id":1, "title": "Customers", "link": "/dashboard/users", "number":1231, "image":"1.png"},
+        { "id":2,"title": "Categories  ", "link": "/dashboard/categories", "number":1231, "image":"2.png"},
+        { "id":3, "title": "Adverts ", "link": "/dashboard/adverts", "number":1231, "image":"3.png"},
+        { "id":4, "title": "Advert-types", "link": "/dashboard/advert-types", "number":1231, "image":"4.png"},
+        { "id":5, "title": "Tour Requests", "link": "/dashboard/tour-requests", "number":1231, "image":"5.png"}
+    ]
+   
+}

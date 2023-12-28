@@ -1,0 +1,102 @@
+@use "../../../styles/variables" as v;
+
+.adTypePage {
+  gap: 10px;
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  .col {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+
+    .inputDiv {
+      position: relative;
+      width: 80%;
+      margin: 10px;
+      border-radius: 20px;
+      background-color: #f4f4f4;
+      margin-right: 10px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      height: 10%;
+    }
+
+    .inputDiv input {
+      padding: 20px;
+      width: calc(100% - 40px); /* İkona ayrılan genişlik kadar azalt */
+      height: 30px;
+      outline: none;
+      border: none;
+      background-color: #f4f4f4;
+    }
+
+    .iconsSearch {
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      /*İstenilenboşlukmiktarınıayarlayabilirsiniz*/
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+     
+      background-color: v.$color2;
+      height: 100%;
+      width: 10%;
+      border-radius: 20px;
+      color: white;
+      &:hover{
+        background-color: v.$color1;
+    }
+    }
+
+    .addNew {
+      margin: 10px;
+
+      float: right;
+      background: none;
+      border: none;
+      padding: 0;
+      color: white;
+      background-color: v.$color2;
+      height: 10%;
+      width: 20%;
+      border-radius: 20px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      &:hover{
+        background-color: v.$color1;
+    }
+
+      @media (min-width: 768px) {
+        align-self: flex-end;
+      }
+    }
+  }
+  .capt {
+    .title {
+      margin-left: 55px;
+    }
+    .action {
+      margin-right: 40px;
+    }
+  }
+
+  .icons {
+    font-size: 25px;
+    font-weight: bold;
+    color: #f18505;
+  }
+
+  .row {
+    padding-left: 50px;
+  }
+}

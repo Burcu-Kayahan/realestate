@@ -1,0 +1,29 @@
+@use "../../styles//variables" as v;
+
+.CustomPaginaton{
+
+display: flex;
+justify-content: right;
+margin-right: 10px;
+
+.buttonAll{
+background-color: white;
+  border: none;
+  font-weight: 500;
+  font-size: 45px;
+  margin-top: 5px;
+}
+ .buttonOne {
+  background-color: white;
+  border: none;
+  font-weight: 400;
+  font-size: 65px;
+ }
+
+ .buttonText{
+  font-size: 30px;  
+  margin-top: 15px;
+   background-color: white;
+  border: none;
+ }
+}

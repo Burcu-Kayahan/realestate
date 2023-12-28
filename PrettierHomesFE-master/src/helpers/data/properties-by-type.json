@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "type":"Houses",
+        "number": 33,
+        "image":"1.png"
+    },
+    {
+        "id":2,
+        "type":"Apartments",
+        "number": 21,
+        "image":"2.png"
+    },
+    {
+        "id":3,
+        "type":"Offices",
+        "number":85,
+        "image":"3.png"
+    },
+    {
+        "id":4,
+        "type":"Villas",
+        "number": 15,
+        "image":"4.png"
+    },
+    {
+        "id":5,
+        "type":"Bungalows",
+        "number": 21,
+        "image":"5.png"
+    }
+]

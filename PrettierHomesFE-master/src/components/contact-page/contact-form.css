@@ -1,0 +1,20 @@
+/* BOOTSTRAP */
+.contact-form {
+  width: 28%;
+  border: 1px solid black;
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  background: white;
+}
+@media (max-width: 992px) {
+  .contact-form {
+    left: 0;
+    width: 100%;
+    position: relative;
+  }
+}
+.contact-form input, .contact-form textarea {
+  border: none;
+  background: #f1f1f1;
+}/*# sourceMappingURL=contact-form.css.map */

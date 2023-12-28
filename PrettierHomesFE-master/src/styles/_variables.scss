@@ -1,0 +1,34 @@
+// COLOR PALETTES
+$color1: #FAD9B1;
+$color2:#F18505;
+$color2-opacity-40: rgba(246, 194, 83, 0.9);
+$color3: #434343;
+$color4: #f1f1f1;
+$color5: #F3F3F3;
+$color6:#383838;
+$color-bg-transparent: rgba(249, 102, 102, 0.155);
+$color7:#929292;
+
+
+/* BOOTSTRAP */
+$primary: $color1;
+$secondary: $color5;
+$success: $color2;
+$info: $color3;
+$warning: $color4;
+$danger: $color1;
+$light: $color4;
+$dark: $color3;
+$font-family: 'Oswald';
+$navbar-nav-link-padding-x: "1rem";
+
+$navbar-light-hover-color: $color2;
+$nav-link-hover-color: $color2;
+$navbar-light-active-color: $color2;
+
+$navbar-dark-color: $color1;
+$navbar-dark-hover-color: $color2;
+$navbar-dark-active-color: $color2;
+$nav-link-font-weight: 600;
+$border-radius: 10px;
+$focus-ring-color: $color2-opacity-40;
