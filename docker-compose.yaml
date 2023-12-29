@@ -21,9 +21,9 @@ services:
     image: 'postgres:13.1-alpine'
     container_name: postgres
     environment:
-      - POSTGRES_USER=techprodb_user
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=carrental
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Devops1234
+      - POSTGRES_DB=Postgres
 
     ports:
       - "5432:5432"
