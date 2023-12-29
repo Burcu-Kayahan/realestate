@@ -55,8 +55,12 @@ public class SecurityConfig {
         config.setAllowCredentials(true);
         config.addAllowedOrigin("http://localhost:3000/");
 	    config.addAllowedOrigin("http://3.82.51.167/");
+	    config.addAllowedOrigin("http://34.201.144.124:8092");
+	    config.addAllowedOrigin("http://34.201.144.124:3000");
+	    config.addAllowedOrigin("http://34.201.144.124:8092/");
+	    config.addAllowedOrigin("http://34.201.144.124:3000/");
 	    config.addAllowedOrigin("http://app:8092 ");
-	    config.addAllowedOrigin("http://backend:8092 ");
+	    config.addAllowedOrigin("http://backend:8092/*");
 	    config.addAllowedOrigin("http://app:80");
 	    config.addAllowedOrigin("http://app:3000");
         config.addAllowedOrigin("https://prettier-homes-fe.vercel.app/");
