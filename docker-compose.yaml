@@ -1,53 +1,44 @@
 version: '3.8'
 
 services:
-  frontend:
-    image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_fronted:frontend-prod-ver2
-    ports:
-      - "80:3000" # React uygulaması için port
-    depends_on:
-       -  backend 
-  networks:
-      - realestate-net
-      
-  backend:
-    image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_backend:backend-prod-ver2
-    ports:
-      - "8092:8092" # Java Spring uygulaması için port
-    environment:
-      SPRING_DATASOURCE_URL: "jdbc:postgresql://database-1.cmpxn5zjrlpn.us-east-1.rds.amazonaws.com:5432/Postgres?reconnect=true"
-      SPRING_DATASOURCE_USERNAME: "postgres"
-      SPRING_DATASOURCE_PASSWORD: "Devops1234"
+ frontend:
+   image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_fronted:frontend-prod-ver2
+   ports:
+     - "80:3000"  # React uygulaması için port
+   depends_on:
+     - backend
+   networks:
+     - realestate-net
 
-    depends_on:
-       -  db
+ backend:
+   image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_backend:backend-prod-ver2
+   ports:
+     - "8092:8092"  # Java Spring uygulaması için port
+   environment:
+     SPRING_DATASOURCE_URL: "jdbc:postgresql://database-1.cmpxn5zjrlpn.us-east-1.rds.amazonaws.com:5432/Postgres?reconnect=true"
+     SPRING_DATASOURCE_USERNAME: "postgres"
+     SPRING_DATASOURCE_PASSWORD: "Devops1234"
+   depends_on:
+     - db
+   networks:
+     - realestate-net
 
-  networks:
-      - realestate-net
-
-
-   db:
-    image: 'postgres:13.1-alpine'
-    container_name: postgres
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=Devops1234
-      - POSTGRES_DB=Postgres
-
-    ports:
-      - "5432:5432"
-    volumes:
-      - db-data:/var/lib/postgresql/data/
-    networks:
-      - realestate-net
+ db:
+   image: 'postgres:13.1-alpine'
+   container_name: postgres
+   environment:
+     - POSTGRES_USER=postgres
+     - POSTGRES_PASSWORD=Devops1234
+     - POSTGRES_DB=Postgres
+   ports:
+     - "5432:5432"
+   volumes:
+     - db-data:/var/lib/postgresql/data/
+   networks:
+     - realestate-net
 
 volumes:
-    db-data:
+ db-data:
 
-    ports:
-      - "5432:5432"
-   
-    networks:
-      - realestate-net
-
-     
+networks:
+ realestate-net:
