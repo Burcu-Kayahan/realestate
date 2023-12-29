@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build and Run Docker Compose') {
+            steps {
+                script {
+                    // Docker Compose dosyasını çalıştırmak için sh komutu
+                    sh '''
+                      docker-compose up -d
+                    '''
+                }
+            }
+        }
+        
+        // Diğer aşamalar...
+    }
+    
+  post {
+    // Sadece 'manual' olarak belirtilmiş bir onay sonrasında çalıştır
+    always {
+        input "Onayınızı bekliyorum. Devam etmek için 'Proceed' yazın."
+        script {
+            sh '''
+                docker-compose -f ./docker-compose.yaml down
+            '''
+        }
+    }
+}
+}
