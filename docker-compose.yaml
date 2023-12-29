@@ -1,53 +1,19 @@
-version: '3'
+version: '3.8'
+
 services:
-  ui:
-    image: 'bluerentalcars-frontend:latest'
-    build:
-      context: ./bluerentalcars-frontend
-    container_name: brc-frontend
-    depends_on:
-      - app
-      - db
-      
+  frontend:
+    image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_fronted:frontend-prod-ver2
     ports:
-      - "80:3000"
-    environment: 
-      - APP_URL=http://localhost:8080/car-rental/api/
-    networks:
-      - carrental-net
-  app:
-    image: 'bluerentalcars-backend:latest'
-    build:
-      context: ./bluerentalcars-backend
-    container_name: brc-backend
+      - "80:3000" # React uygulaması için port
     depends_on:
-      - db
+       -  backend 
+  backend:
+    image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_backend:backend-prod-ver2
+    ports:
+      - "8092:8092" # Java Spring uygulaması için port
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://database-1.cmpxn5zjrlpn.us-east-1.rds.amazonaws.com:5432/Postgres?reconnect=true"
+      SPRING_DATASOURCE_USERNAME: "postgres"
+      SPRING_DATASOURCE_PASSWORD: "Devops1234"
+
      
-    ports:
-      - "8080:8080"
-    restart: always
-    environment:
-      - DATABASE_URL=jdbc:postgresql://db:5432/carrental
-    networks:
-      - carrental-net
-          
-  db:
-    image: 'postgres:13.1-alpine'
-    container_name: postgres
-    environment:
-      - POSTGRES_USER=techprodb_user
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=carrental
-
-    ports:
-      - "5432:5432"
-    volumes:
-      - db-data:/var/lib/postgresql/data/
-    networks:
-      - carrental-net
-
-volumes:
-    db-data:
-networks:
-    carrental-net:
-        driver: bridge
