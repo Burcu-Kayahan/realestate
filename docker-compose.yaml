@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
  frontend:
-   image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_fronted:frontend-prod-ver7
+   image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_fronted:frontend-prod-ver8
    ports:
      - "80:3000"  # React uygulaması için port
    depends_on:
@@ -11,7 +11,7 @@ services:
      - realestate-net
 
  backend:
-   image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_backend:backend-prod-ver7
+   image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_backend:backend-prod-ver8
    ports:
      - "8081:8092"  # Java Spring uygulaması için port
    environment:
