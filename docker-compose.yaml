@@ -16,4 +16,29 @@ services:
       SPRING_DATASOURCE_USERNAME: "postgres"
       SPRING_DATASOURCE_PASSWORD: "Devops1234"
 
+
+   db:
+    image: 'postgres:13.1-alpine'
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=techprodb_user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=carrental
+
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data/
+    networks:
+      - carrental-net
+
+volumes:
+    db-data:
+
+    ports:
+      - "5432:5432"
+   
+    networks:
+      - realestate-net
+
      
