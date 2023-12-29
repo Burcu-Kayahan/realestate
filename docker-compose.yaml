@@ -13,7 +13,7 @@ services:
  backend:
    image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_backend:backend-prod-ver6
    ports:
-     - "8092:8092"  # Java Spring uygulaması için port
+     - "8080:8092"  # Java Spring uygulaması için port
    environment:
      SPRING_DATASOURCE_URL: "jdbc:postgresql://database-1.cmpxn5zjrlpn.us-east-1.rds.amazonaws.com:5432/Postgres?reconnect=true"
      SPRING_DATASOURCE_USERNAME: "postgres"
