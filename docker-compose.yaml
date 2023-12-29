@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
  frontend:
-   image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_fronted:frontend-prod-ver6
+   image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_fronted:frontend-prod-ver7
    ports:
      - "80:3000"  # React uygulaması için port
    depends_on:
@@ -11,9 +11,9 @@ services:
      - realestate-net
 
  backend:
-   image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_backend:backend-prod-ver6
+   image: 330107521728.dkr.ecr.us-east-1.amazonaws.com/real_project_backend:backend-prod-ver7
    ports:
-     - "8080:8092"  # Java Spring uygulaması için port
+     - "8081:8092"  # Java Spring uygulaması için port
    environment:
      SPRING_DATASOURCE_URL: "jdbc:postgresql://database-1.cmpxn5zjrlpn.us-east-1.rds.amazonaws.com:5432/Postgres?reconnect=true"
      SPRING_DATASOURCE_USERNAME: "postgres"
