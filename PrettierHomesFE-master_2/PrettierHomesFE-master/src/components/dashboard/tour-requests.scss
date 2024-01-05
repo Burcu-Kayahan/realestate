@@ -1,0 +1,27 @@
+@use "../../styles/variables" as v;
+
+.tour-request{
+
+  
+  
+  .searchInput{
+  
+    border-radius: 10px;
+    border: 0 !important;
+  background-color: rgb(245, 244, 244);
+  }
+  
+ 
+  button {
+    border: 0 !important;
+    background-color: orange !important;
+    
+    font-style: bold;
+  }
+  .VscSearch {
+font-size: 30px !important;
+color: white !important;
+margin: 0;
+  }
+ 
+}

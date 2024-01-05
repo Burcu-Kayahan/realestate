@@ -1,0 +1,132 @@
+@use "../../../styles//variables" as v;
+
+.properties-card-feature{
+    position: relative;
+    width: 350px;
+    height: auto;
+    // overflow: hidden;
+    img.card-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+    p{
+        margin-bottom: 0px;
+    }
+    .location {
+        font-size: 12px;
+    }
+
+    .title{
+        font-size: 15px;
+        
+    }
+
+    .properties-card-body{
+        
+        display: flex;
+        position: absolute;
+        bottom: 0px;
+         margin-left: 5px;
+         margin-right: 0px;
+        color: black;
+        background-color: rgba(240, 240, 240,.8);
+        width: 97%;
+        height: 30%;
+        text-align: start;
+        align-items: center;
+        border-radius: 15px;
+        // padding: 10px;
+        // gap: 30px;
+        justify-content: space-between;
+       
+                                     
+        
+        
+        .properties-card-cost{
+            border: 1px solid black;
+            display: inline;
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+            font-weight: bold;
+            margin-right: 10px;
+           
+        }
+.properties-card-small-cost{
+    display: none !important;    
+}
+      
+    }
+
+    @media (max-width:1200px){
+        width: 250px;
+        height: auto;
+        overflow: hidden;
+    
+
+    p{
+        margin-bottom: -5px;
+    }
+
+    .title{
+        overflow: hidden;
+        text-overflow: ellipsis; // Metni kesip üç nokta (...) ile gösterir.
+        white-space: nowrap;
+    }
+
+    .cartText{
+        flex-grow: 1; 
+    }
+    .heart-icon{
+        position: absolute;
+        color: white;
+        top: -5px;
+        right: 10px;
+        font-size: 25px;
+        border: none;
+    }
+
+    .heart-icon-full{
+        position: absolute;
+        color: red;
+        top: -5px;
+        right: 10px;
+        font-size: 25px;
+        border: none;     
+        
+    } 
+
+    .properties-card-body{
+        
+        display: flex;
+        position: absolute;
+        bottom: 0px;
+         margin-left: 5px;
+         margin-right: 5px;
+        color: black;
+        background-color: rgba(240, 240, 240,.8);
+        width: 95%;
+        height: 40%;
+        text-align: start;
+        align-items: center;
+        border-radius: 15px;
+        // padding: 10px;
+        // gap: 30px;
+        justify-content: space-between;
+       
+                                     
+        
+        
+        .properties-card-cost{          
+            display: none !important;        
+           
+        }
+
+        .properties-card-small-cost{
+            display: block !important;    
+            }
+    }
+}
+}
