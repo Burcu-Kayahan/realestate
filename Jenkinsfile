@@ -1,5 +1,3 @@
-deleteDir()
-
 pipeline {
     agent any
     environment {
